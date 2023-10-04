@@ -21,7 +21,7 @@ export default function Tables  (props)  {
             return (
               <tr key={movies.id}>
                 <td>
-                  <img src={movies.Images[2]} width="200px" />
+                  <img src={movies.Images[2]} alt={movies.Title} width="200px" />
                 </td>
                 <td>{movies.Title}</td>
                 <td>{movies.Language}</td>
