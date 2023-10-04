@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Tables from "./Tables";
-import axios from "axios";
+// import axios from "axios";
 import AddMovies from "./AddMovies";
 import moviesData from "./movie.json"; // Adjust the path as needed
 
