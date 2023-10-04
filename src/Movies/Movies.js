@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react";
 import Tables from "./Tables";
 import axios from "axios";
 import AddMovies from "./AddMovies";
+import moviesData from "./movie.json"; // Adjust the path as needed
 
 export default function Movies() {
   const [data, setDate] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  // useEffect(() => {
+  //   axios
+  //     .get(`http://localhost:3004/movies`)
+  //     .then((res) => setDate(res.data))
+  //     .catch((error) => console.error("Error fetching data", error))
+  // }, []);
   useEffect(() => {
-    axios
-      .get(`http://localhost:3004/movies`)
-      .then((res) => setDate(res.data))
-      .catch((error) => console.error("Error fetching data", error))
+    // Set the data from the imported JSON file
+    setDate(moviesData.movies);
   }, []);
 
   const handleDelete = (movies) => {
