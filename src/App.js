@@ -1,49 +1,30 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Weather from "./Weather/Wet";
 import TodoList from "./TodoList/TodoList";
 import Movies from "./Movies/Movies";
 import "./App.css";
+import Card from "./Card";
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg1">
-      <div className="wrapper1">
-        <Link className="link1" to="/Weather">
-          <div className="card1" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/weather.jpg)`, backgroundSize: "cover" }}>
-            <div className="info1">
-              <h3 style={{ backgroundImage: "none" }}>Check Weather</h3>
-            </div>
-          </div>
-        </Link>
-
-        <Link className="link1" to="/TodoList">
-          <div className="card1" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/todolist.jpg)`, backgroundSize: "100% 100%" }}>
-            <div className="info1">
-              <h3 style={{ backgroundImage: "none" }}>Check TodoList</h3>
-            </div>
-          </div>
-        </Link>
-
-        <Link className="link1" to="/Movies">
-          <div className="card1" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/movies.jpg)`, backgroundSize: "105% 105%"  }}>
-            <div className="info1">
-              <h3 style={{ backgroundImage: "none" }}>Check Movies</h3>
-            </div>
-          </div>
-        </Link>
-
-        <Link className="link1" to="/Books">
-          <div className="card1" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/book2.jpg)`,  backgroundSize: "cover" }}>
-            <div className="info1">
-              <h3 style={{ backgroundImage: "none" }}>Check Books</h3>
-            </div>
-          </div>
-        </Link>
+    <div className="bg">
+      {/* <div> */}
+      <div className="gallary">
+        <Card
+          url="./weather.jpg"
+          heading="Check Weather"
+          details={"Weather is the state of the atmosphere, describing for example the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.[1] On Earth, most weather phenomena occur in the lowest layer of the planet's atmosphere, the troposphere,[2][3] just below the stratosphere. Weather refers to day-to-day temperature, precipitation, and other atmospheric conditions, whereas climate is the term for the averaging of atmospheric conditions over longer periods of time.[4] When used without qualification,  is generally understood to mean the weather of Earth."}
+          to="/Weather"
+        />
+        <Card url="./todolist.jpg" className="small-card img" />
+        <Card url="./movies.jpg" />
+        <Card url="./book.jpg" />
       </div>
     </div>
+    // </div>
   );
 };
+
 
 const Wet = () => {
   return <Weather />;
@@ -59,17 +40,26 @@ const Mov = () => {
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Link to="/">Home</Link>
-      </div>
-      <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route path="/Weather" element={<Wet />} />
-        <Route path="/TodoList" element={<Todo />} />
-        <Route path="/Movies" element={<Mov />} />
-      </Routes>
-    </Router>
+    <div className="bg">
+      <Router>
+        <div>
+          <Link to="/">
+            <img
+              width="50px"
+              alt="loading"
+              style={{ backgroundColor: "white", marginBottom: "3%" }}
+              src="./home.png"
+            />
+          </Link>
+        </div>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/Weather" element={<Wet />} />
+          <Route path="/TodoList" element={<Todo />} />
+          <Route path="/Movies" element={<Mov />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

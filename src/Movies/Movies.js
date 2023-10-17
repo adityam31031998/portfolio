@@ -15,7 +15,6 @@ export default function Movies() {
   //     .catch((error) => console.error("Error fetching data", error))
   // }, []);
   useEffect(() => {
-    // Set the data from the imported JSON file
     setDate(moviesData.movies);
   }, []);
 
