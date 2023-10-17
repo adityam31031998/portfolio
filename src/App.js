@@ -13,18 +13,30 @@ const Layout = ({ children }) => {
         <Card
           url="./weather.jpg"
           heading="Check Weather"
-          details={"Weather is the state of the atmosphere, describing for example the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.[1] On Earth, most weather phenomena occur in the lowest layer of the planet's atmosphere, the troposphere,[2][3] just below the stratosphere. Weather refers to day-to-day temperature, precipitation, and other atmospheric conditions, whereas climate is the term for the averaging of atmospheric conditions over longer periods of time.[4] When used without qualification,  is generally understood to mean the weather of Earth."}
+          details={
+            "Weather is the state of the atmosphere, describing for example the degree to which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.[1] On Earth, most weather phenomena occur in the lowest layer of the planet's atmosphere, the troposphere,[2][3] just below the stratosphere. Weather refers to day-to-day temperature, precipitation, and other atmospheric conditions, whereas climate is the term for the averaging of atmospheric conditions over longer periods of time.[4] When used without qualification,  is generally understood to mean the weather of Earth."
+          }
           to="/Weather"
         />
-        <Card url="./todolist.jpg" className="small-card img" />
-        <Card url="./movies.jpg" />
-        <Card url="./book.jpg" />
+        <Card
+          url="./todolist.jpg"
+          details={
+            "Clear your mind \n The fastest way to get tasks out of your head.Type just about anything into the task field and Todoist’s one-of-its-kind natural language recognition will instantly fill your to-do list.Focus on what’s importantReach that mental clarity you’ve been longing for.Your tasks are automatically sorted into Today, Upcoming, and custom Filter views to help you prioritize your most important work."
+          }
+          className="small-card img"
+        />
+        <Card url="./movies.jpg" details={
+            "Clear your mind \n The fastest way to get tasks out of your head.Type just about anything into the task field and Todoist’s one-of-its-kind natural language recognition will instantly fill your to-do list.Focus on what’s importantReach that mental clarity you’ve been longing for.Your tasks are automatically sorted into Today, Upcoming, and custom Filter views to help you prioritize your most important work."
+          } />
+        <Card url="./book.jpg" details={
+            "Clear your mind \n The fastest way to get tasks out of your head.Type just about anything into the task field and Todoist’s one-of-its-kind natural language recognition will instantly fill your to-do list.Focus on what’s importantReach that mental clarity you’ve been longing for.Your tasks are automatically sorted into Today, Upcoming, and custom Filter views to help you prioritize your most important work."
+          }
+           />
       </div>
     </div>
     // </div>
   );
 };
-
 
 const Wet = () => {
   return <Weather />;
@@ -45,9 +57,10 @@ function App() {
         <div>
           <Link to="/">
             <img
-              width="50px"
+              width="10%"
+              height="auto"
               alt="loading"
-              style={{ backgroundColor: "white", marginBottom: "3%" }}
+              style={{ margin: "2%" }}
               src="./home.png"
             />
           </Link>

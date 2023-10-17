@@ -2,129 +2,30 @@
   margin: 0px;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-  body {
-    background-image: linear-gradient(147deg, #FFE53B -20%, #fd3838 100%);
-  }
-
-  .card2 {
-    width: 73vb;
-    height: 40vh;
-    margin: auto 8%;
-    position: relative;
-  }
-
-  .link2 {
-    border-radius: 10px;
-    width: 90%;
-    height: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: white;
-    justify-content: center;
-    align-items: flex-end;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .info2 {
-    display: none;
-  }
-
-  .des {
-    color: black;
-    max-height: 58%;
-    max-width: 60%;
-    overflow-y: scroll;
-    position: relative;
-    bottom: 30%;
-    right: -15%;
-    text-decoration: none;
-  }
-  
-  
-  p{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: justify;
-  }
-  .text1 {
-    color: white;
-    background: #fd3838;
-    padding: 10px;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px 0px black;
-    display: inline-block;
-    position: absolute;
-    bottom: 15%;
-  }
-
-  .img1 {
-    box-shadow: 10px 10px 5px rgba(252, 56, 56, 0.4);
-    left: -30px;
-    top: 10%;
-    background-color: #fd3838;
-    position: absolute;
-    border-radius: 10px;
-    width: 30%;
-    height: 60%;
-    background-size: 30px 40px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
-    padding: 10px;
-  }
-}
-
 /* Extra Small Devices (phones) */
 @media (max-width: 575px) {
   body {
-    background-image: linear-gradient(147deg, #FFE53B -20%, #fd3838 100%);
+    background-color: #ff6f00;
+    /* background-image: linear-gradient(147deg, #FFE53B -20%, #fd3838 100%); */
   }
 
   .card2 {
-    width: 73vb;
-    height: 40vh;
-    margin: auto 8%;
+    width: 80%;
+    height: 190px;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: auto 12.5%;
+    align-items: center;
+    justify-content: center;
   }
 
   .link2 {
+    position: relative;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     height: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     background-color: white;
-    justify-content: center;
-    align-items: flex-end;
   }
 
   a {
@@ -135,43 +36,46 @@
     display: none;
   }
 
-  .des {
+   .des {
     color: black;
     max-height: 58%;
     max-width: 60%;
     overflow-y: scroll;
-    position: relative;
-    bottom: 30%;
-    right: -15%;
+    position: absolute;
+    top: 25%;
+    right: 1%;
+    font-size: 8px;
     text-decoration: none;
   }
-  
-  
+
   p{
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
   }
-  .text1 {
-    color: white;
-    background: #fd3838;
-    padding: 10px;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px 0px black;
-    display: inline-block;
+ .text1 {
     position: absolute;
-    bottom: 15%;
+    background: #fd3838;
+    color: white;
+    font-weight: 10px;
+    font-size: 10px;
+    padding: 4px;
+    border-radius: 5px;
+    align-items: end;
+    bottom: 2%;
+    right: 5%;
   }
 
   .img1 {
-    box-shadow: 10px 10px 5px rgba(252, 56, 56, 0.4);
-    left: -30px;
-    top: 10%;
+    box-shadow:3px 3px 2px rgba(252, 56, 56, 0.4);
+    left: -20px;
+    top: 15%;
     background-color: #fd3838;
     position: absolute;
     border-radius: 10px;
-    width: 30%;
-    height: 60%;
-    background-size: 30px 40px;
+    width: 40%;
+    height: 70%;
+    object-fit: fill;
+    background-size: 100px, 4px;
   }
   ::-webkit-scrollbar-thumb {
     background: red;
@@ -179,7 +83,7 @@
   }
   
   ::-webkit-scrollbar {
-    width: 20px;
+    width: 10px;
   }
   
   ::-webkit-scrollbar-track {
@@ -290,13 +194,14 @@
   
   ::-webkit-scrollbar-thumb:hover {
     background: #b30000;
-    padding: 10px;
+    margin: 20px;
+
   }
 }
 
 /* Medium Devices (small laptops) */
 @media (min-width: 768px) and (max-width: 991px) {
-
+  
   body {
     background-image: linear-gradient(147deg, #FFE53B -20%, #fd3838 100%);
   }
