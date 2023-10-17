@@ -68,12 +68,12 @@
   .img1 {
     box-shadow:3px 3px 2px rgba(252, 56, 56, 0.4);
     left: -20px;
-    top: 15%;
+    top: 7.5%;
     background-color: #fd3838;
     position: absolute;
     border-radius: 10px;
     width: 40%;
-    height: 70%;
+    height: 85%;
     object-fit: fill;
     background-size: 100px, 4px;
   }
